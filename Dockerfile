@@ -3,6 +3,7 @@ FROM alpine:3.4
 ARG BUILD_DATE
 ARG VCS_REF
 
+ENV vversion=$P_VERSION
 LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vcs-url="https://github.com/rossf7/label-schema-automated-build.git" \
       org.label-schema.vcs-ref=$VCS_REF \

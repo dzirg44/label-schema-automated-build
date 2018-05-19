@@ -1,16 +1,27 @@
 FROM alpine:3.4
 
-ARG BUILD_DATE
-ARG VCS_REF
-ARG P_VERSION
+ARG BRANCH
+ARG COMMIT
+ARG DATE
+ARG URL
+ARG VERSION
 
-ENV vversion=$P_VERSION
-ENV bdate=$BUILD_DATE
-ENV vcsref=$VCS_REF
-LABEL org.label-schema.build-date=$BUILD_DATE \
-      org.label-schema.vcs-url="https://github.com/dzirg44/label-schema-automated-build.git" \
-      org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.schema-version="1.0.0-rc1"
+ENV BRANCH "$BRANCH"
+ENV COMMIT "$COMMIT"
+ENV DATE "$DATE"
+ENV VERSION "$VERSION"
+
+
+LABEL org.label-schema.schema-version="1.0" \
+    org.label-schema.build-date=$DATE \
+    org.label-schema.vendor="Justin J. Novack" \
+    org.label-schema.name="jnovack/dockerhub-hooks" \
+    org.label-schema.description="Sample Docker Hub Build Hooks" \
+    org.label-schema.version="$VERSION" \
+    org.label-schema.vcs-url=$URL \
+    org.label-schema.vcs-branch=$BRANCH \
+    org.label-schema.vcs-ref=$COMMIT
+
 
 COPY sleep.sh /
 

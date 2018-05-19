@@ -2,6 +2,8 @@
 
 # $IMAGE_NAME var is injected into the build so the tag is correct.
 echo "[***] Build hook running"
+tag=$(git describe --abbrev=0 --tags)
+version=${tag:1}
 
 docker build \
   --build-arg VERSION=$(git describe --tags --always) \
@@ -9,5 +11,5 @@ docker build \
   --build-arg URL=$(git config --get remote.origin.url) \
   --build-arg BRANCH=$(git rev-parse --abbrev-ref HEAD) \
   --build-arg DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ") \
-  --build-arg REV=$(git describe --abbrev=0 --tags) \
+  --build-arg REV=$version \
   -t $IMAGE_NAME .

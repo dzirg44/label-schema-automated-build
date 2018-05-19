@@ -5,6 +5,7 @@ ARG VCS_REF
 ARG P_VERSION
 
 ENV vversion=$P_VERSION
+ENV bdate=$BUILD_DATE
 LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vcs-url="https://github.com/dzirg44/label-schema-automated-build.git" \
       org.label-schema.vcs-ref=$VCS_REF \

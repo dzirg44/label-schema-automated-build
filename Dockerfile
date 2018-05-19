@@ -11,7 +11,7 @@ ENV BRANCH "$BRANCH"
 ENV COMMIT "$COMMIT"
 ENV DATE "$DATE"
 ENV VERSION "$VERSION"
-ENV VER "$REV"
+ENV REV "$REV"
 
 
 LABEL org.label-schema.schema-version="1.0" \

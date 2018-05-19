@@ -4,6 +4,7 @@
 echo "[***] Build hook running"
 #tag=$(git describe --abbrev=0 --tags)
 #tag=$(git describe --tags --always)
+git describe --abbrev=0 --tags
 tag=$(git tag | tail -n 1)
 echo ${tag}
 #version=${tag:1}

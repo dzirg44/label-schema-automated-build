@@ -2,6 +2,7 @@ FROM alpine:3.4
 
 ARG BUILD_DATE
 ARG VCS_REF
+ARG P_VERSION
 
 ENV vversion=$P_VERSION
 LABEL org.label-schema.build-date=$BUILD_DATE \

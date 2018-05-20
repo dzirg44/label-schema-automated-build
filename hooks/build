@@ -6,6 +6,7 @@ echo "[***] Build hook running"
 #tag=$(git describe --tags --always)
 git describe --abbrev=0 --tags
 ls -la
+cat .git/packed-refs
 tag=$(git tag | tail -n 1)
 echo ${tag}
 #version=${tag:1}

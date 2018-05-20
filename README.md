@@ -1,4 +1,4 @@
-# label-schema-automated-build
+# label-schema-automated-build 2
 
 [![](https://images.microbadger.com/badges/image/rossf7/label-schema-automated-build.svg)](https://microbadger.com/images/rossf7/label-schema-automated-build "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/commit/rossf7/label-schema-automated-build.svg)](https://microbadger.com/images/rossf7/label-schema-automated-build "Get your own commit badge on microbadger.com")
 

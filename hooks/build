@@ -6,9 +6,12 @@ echo "[***] Build hook running"
 #tag=$(git describe --tags --always)
 git describe --abbrev=0 --tags
 ls -la
+echo "cat tag"
 cat .git/packed-refs
+echo "end cat tag"
+git ls-remote --tags
 tag=$(git tag | tail -n 1)
-echo ${tag}
+echo "my tag ${tag}"
 #version=${tag:1}
 
 docker build \
